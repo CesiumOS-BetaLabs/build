@@ -696,13 +696,13 @@ function lunch()
         # if we can't find the product, try to grab it from our github
         T=$(gettop)
         pushd $T > /dev/null
-        $T/vendor/cesium/build/tools/roomservice.py $product
+        $T/vendor/cesium/build/DNM/tools/roomservice.py $product
         popd > /dev/null
         check_product $product
     else
         T=$(gettop)
         pushd $T > /dev/null
-        $T/vendor/potato/cesium/tools/roomservice.py $product true
+        $T/vendor/potato/cesium/DNM/tools/roomservice.py $product true
         popd > /dev/null
     fi
     if [ $? -ne 0 ]
